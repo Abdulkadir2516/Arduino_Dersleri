@@ -13,6 +13,7 @@ SoftwareSerial BTSerial(2, 3);  // RX | TX
 void setup() {
 
   BTSerial.begin(9600);
+  Serial.begin(9600);
 
   pinMode(Enable_A, OUTPUT);
   pinMode(Enable_B, OUTPUT);
@@ -31,6 +32,7 @@ void loop() {
   if (BTSerial.available()) {
 
     char receivedChar = BTSerial.read();
+    Serial.println(receivedChar);
     if (receivedChar == 'F') {
       ileri();
     } else if (receivedChar == 'B') {
@@ -60,8 +62,8 @@ void geri() {
 
   calis();
   //----------Run motors-----------//
-  digitalWrite(inputA1, 1);
-  digitalWrite(inputA2, 0);
+  digitalWrite(inputA1, 0);
+  digitalWrite(inputA2, 1);
   digitalWrite(inputB1, 1);
   digitalWrite(inputB2, 0);
 }
@@ -69,8 +71,8 @@ void geri() {
 void ileri() {
   calis();
   //----------Run motors-----------//
-  digitalWrite(inputA1, 0);
-  digitalWrite(inputA2, 1);
+  digitalWrite(inputA1, 1);
+  digitalWrite(inputA2, 0);
   digitalWrite(inputB1, 0);
   digitalWrite(inputB2, 1);
 }
@@ -79,8 +81,8 @@ void sol() {
   calis();
 
   //----------Run motors-----------//
-  digitalWrite(inputA1, 1);
-  digitalWrite(inputA2, 0);
+  digitalWrite(inputA1, 0);
+  digitalWrite(inputA2, 1);
   digitalWrite(inputB1, 0);
   digitalWrite(inputB2, 1);
 }
@@ -89,8 +91,8 @@ void sag() {
   calis();
 
   //----------Run motors-----------//
-  digitalWrite(inputA1, 0);
-  digitalWrite(inputA2, 1);
+  digitalWrite(inputA1, 1);
+  digitalWrite(inputA2, 0);
   digitalWrite(inputB1, 1);
   digitalWrite(inputB2, 0);
 }
