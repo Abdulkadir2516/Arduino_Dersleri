@@ -20,6 +20,32 @@ Operator 	Name 	        Description 	                            Example 	Try it
 ++ 	        Increment 	    Increases the value of a variable by 1  	++x
 -- 	        Decrement 	    Decreases the value of a variable by 1  	--x
 */
+
+
+/*
+Assignment operators
+
+A list of all assignment operators:
+Operator 	Example 	Same As
+= 	        x = 5 	    x = 5
++= 	        x += 3 	    x = x + 3
+-= 	        x -= 3 	    x = x - 3
+*=      	x *= 3  	x = x * 3
+/=      	x /= 3  	x = x / 3
+%= 	        x %= 3  	x = x % 3
+&= 	        x &= 3  	x = x & 3
+|= 	        x |= 3  	x = x | 3
+^= 	        x ^= 3  	x = x ^ 3
+>>=        	x >>= 3 	x = x >> 3
+<<= 	    x <<= 3 	x = x << 3
+
+*/
+/*
+    Comparison operators
+
+
+
+*/
 #include <stdio.h>
 
 int main() {
